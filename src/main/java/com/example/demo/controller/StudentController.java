@@ -23,6 +23,11 @@ public class StudentController {
     public Student addStudent(@RequestBody Student student) {
         return service.save(student);
     }
+    
+    @GetMapping("/welcome")
+    public String welcomeMessage() {
+        return "Hello from Spring Boot CI/CD Pipeline! Updated successfully.";
+    }
 
     @GetMapping
     public List<Student> getAllStudents() {
